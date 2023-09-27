@@ -22,7 +22,7 @@ headers = ["name", "light_years_from_earth", "planet_mass", "stellar_magnitude",
 # Defina o método de coleta de dados dos exoplanetas
 def scrape():
 
-    for i in range(0,10):
+    for i in range(0,553):
         print(f'Coletando dados da página {i+1} ...' )
         
         # Objeto BeautifulSoup
