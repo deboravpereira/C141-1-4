@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import time
 import pandas as pd
 #importe csv
-import csv
+
 
 # URL dos Exoplanetas da NASA
 START_URL = "https://exoplanets.nasa.gov/exoplanet-catalog/"
@@ -48,13 +48,10 @@ def scrape():
             planets_data.append(temp_list)
         
         # Encontre todos os elementos na página e clique para passar para a próxima página
-        browser.find_element(by=By.XPATH, value='//*[@id="primary_column"]/footer/div/div/div/nav/span[2]/a').click()
+        
     
     #escreva e salve o arquivo csv com o resultado
-    with open("scraper.csv","w") as f:
-        csvwriter = csv.writer(f)
-        csvwriter.writerow(headers)
-        csvwriter.writerows(planets_data)
+
 
 # Chamando o método    
 scrape()
